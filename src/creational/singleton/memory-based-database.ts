@@ -1,5 +1,5 @@
-class FileBasedDatabase {
-  private static instance: FileBasedDatabase;
+class MemoryBasedDatabase {
+  private static instance: MemoryBasedDatabase;
 
   private readonly data: string[];
 
@@ -7,12 +7,12 @@ class FileBasedDatabase {
     this.data = [];
   }
 
-  public static getInstance(): FileBasedDatabase {
-    if (!FileBasedDatabase.instance) {
-      FileBasedDatabase.instance = new FileBasedDatabase();
+  public static getInstance(): MemoryBasedDatabase {
+    if (!MemoryBasedDatabase.instance) {
+      MemoryBasedDatabase.instance = new MemoryBasedDatabase();
     }
 
-    return FileBasedDatabase.instance;
+    return MemoryBasedDatabase.instance;
   }
 
   public getData(): string {
@@ -25,11 +25,11 @@ class FileBasedDatabase {
 }
 
 (() => {
-  const db1 = FileBasedDatabase.getInstance();
+  const db1 = MemoryBasedDatabase.getInstance();
   db1.setData('Hello');
   console.log(db1.getData());
 
-  const db2 = FileBasedDatabase.getInstance();
+  const db2 = MemoryBasedDatabase.getInstance();
   db2.setData('World');
   console.log(db2.getData());
 
