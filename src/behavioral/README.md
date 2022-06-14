@@ -1,4 +1,4 @@
-# Padrões estruturais
+# Padrões comportamentais
 
 Cuidam da comunicação eficiente e da assinalação de responsabilidades entre objetos.
 
