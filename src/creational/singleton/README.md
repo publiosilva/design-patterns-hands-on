@@ -10,4 +10,4 @@ A solução descrita por este padrão envolve tornar o construtor do objeto priv
 
 ## Exemplos
 
- - [Banco de dados baseado em arquivo](./file-based-database.ts)
+ - [Banco de dados baseado em memória](./memory-based-database.ts)

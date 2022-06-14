@@ -1,10 +1,10 @@
-import fs from 'fs';
-
 class FileBasedDatabase {
   private static instance: FileBasedDatabase;
 
+  private readonly data: string[];
+
   private constructor() {
-    fs.writeFileSync('data.txt', '', { encoding: 'utf8', flag: 'w+' });
+    this.data = [];
   }
 
   public static getInstance(): FileBasedDatabase {
@@ -16,11 +16,11 @@ class FileBasedDatabase {
   }
 
   public getData(): string {
-    return fs.readFileSync('data.txt', 'utf8');
+    return this.data.join('\n');
   }
 
   public setData(data: string): void {
-    fs.appendFileSync('data.txt', `${data}\n`, { encoding: 'utf8' });
+    this.data.push(data);
   }
 }
 
