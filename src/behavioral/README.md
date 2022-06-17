@@ -4,3 +4,4 @@ Cuidam da comunicação eficiente e da assinalação de responsabilidades entre 
 
 - [Chain of responsability](./chain-of-responsability/README.md)
 - [Observer](./observer/README.md)
+- [Template method](./template-method/README.md)
