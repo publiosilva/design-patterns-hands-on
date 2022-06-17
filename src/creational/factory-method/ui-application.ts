@@ -1,4 +1,4 @@
-abstract class Dialog {
+abstract class AbstractDialog {
   protected readonly components: string[];
 
   constructor() {
@@ -15,19 +15,19 @@ abstract class Dialog {
   abstract addButton(label: string): void;
 }
 
-class WinDialog extends Dialog {
+class WinDialog extends AbstractDialog {
   addButton(label: string) {
     this.components.push(`[WIN-BUTTON]${label}[WIN-BUTTON]`);
   }
 }
 
-class MacDialog extends Dialog {
+class MacDialog extends AbstractDialog {
   addButton(label: string) {
     this.components.push(`[MAC-BUTTON]${label}[MAC-BUTTON]`);
   }
 }
 
-class LinuxDialog extends Dialog {
+class LinuxDialog extends AbstractDialog {
   addButton(label: string) {
     this.components.push(`[LINUX-BUTTON]${label}[LINUX-BUTTON]`);
   }
