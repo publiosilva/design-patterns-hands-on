@@ -10,4 +10,4 @@ A solução que este padrão descreve envolve separar cada etapa do processament
 
 ## Exemplos
 
- - [Sitema de suporte](./order-notification.ts)
+ - [Sistema de suporte](./support-system.ts)
